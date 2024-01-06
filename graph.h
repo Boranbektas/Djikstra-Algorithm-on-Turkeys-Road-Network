@@ -30,7 +30,7 @@ private:
     unordered_map <string,vector<int>> distances;
     int V;
     int E;
-    string LabelOfNodes[81]={ "adana", "adiyaman", "afyonkarahisar", "agri", "amasya", "ankara", "antalya", "artvin", "aydin", "balikesir",
+    string LabelOfNodes[81]={ "adana", "adiyaman", "afyon", "agri", "amasya", "ankara", "antalya", "artvin", "aydin", "balikesir",
         "bilecik", "bingol", "bitlis", "bolu", "burdur", "bursa", "canakkale", "cankiri", "corum", "denizli",
         "diyarbakir", "edirne", "elazig", "erzincan", "erzurum", "eskisehir", "gaziantep", "giresun", "gumushane",
         "hakkari", "hatay", "isparta", "icel", "istanbul", "izmir", "kars", "kastamonu", "kayseri", "kirklareli",
@@ -102,7 +102,6 @@ public:
 };
 
 
-
 void Graph::CreateGraph(ifstream &adjacent_cities){
 
     string line;
@@ -155,7 +154,6 @@ void Graph::GenerateDistanceMap(ifstream &city_distances){  //maps out distances
 
 }
 
-
 deque<string> Graph::Djikstra(string start,string goal,int &Costofpath){
     deque<string> path;       
     Costofpath=0;
@@ -172,6 +170,7 @@ deque<string> Graph::Djikstra(string start,string goal,int &Costofpath){
     priority_queue <pair<int,string>,vector<pair<int,string>>,greater<pair<int,string>>> perimeter; 
 
     perimeter.push({0,start});
+
     while(!perimeter.empty()){
 
         string currentcity = perimeter.top().second;        //Get the minimum distanced node away from our path

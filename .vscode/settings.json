@@ -8,6 +8,7 @@
         "limits": "cpp",
         "span": "cpp",
         "utility": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "deque": "cpp"
     }
 }

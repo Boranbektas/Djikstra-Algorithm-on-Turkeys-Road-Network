@@ -81,6 +81,7 @@ class Menu{
             cout<<SelectedCity<<endl;
             cout<<endl;
         }
+        
         void FindShortestPathto(){
             cout<<endl;
             string s;
@@ -115,7 +116,7 @@ class Menu{
         void PrintPath(deque<string> q,int cost){
             cout<<endl;
             int counter=0;
-            int size=q.size();
+            size_t size=q.size();
             cout<<"Path from "<<q.back()<<" to "<<q.front()<<" is:"<<endl;
             while(!q.empty()){
                 if(counter==0){
